@@ -32,7 +32,26 @@ class FollowToggle {
       });
     }
   }
-
+  render() {
+    switch (this.followState) {
+      case 'followed':
+        this.$el.prop('disabled', false);
+        this.$el.html('Unfollow!');
+        break;
+      case 'unfollowed':
+        this.$el.prop('disabled', false);
+        this.$el.html('Follow!');
+        break;
+      case 'following':
+        this.$el.prop('disabled', true);
+        this.$el.html('Following...');
+        break;
+      case 'unfollowing':
+        this.$el.prop('disabled', true);
+        this.$el.html('Unfollowing...');
+        break;
+    }
+  }
   
 }
 
