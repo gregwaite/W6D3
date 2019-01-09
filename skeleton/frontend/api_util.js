@@ -7,7 +7,7 @@ const APIUtil = {
       method: 'GET',
       data: { query }
     })
-  ),
+  )
 }
 
 module.exports = APIUtil;
